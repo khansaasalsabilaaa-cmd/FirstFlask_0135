@@ -1,25 +1,32 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Form Flask POST</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
 
-    <h2>Form Input Nama</h2>
+    <div class="container">
 
-    <form action="/proses" method="POST">
+        <h2>Form Input Nama</h2>
 
-        <label>Masukkan Nama:</label>
+        <form action="/proses" method="POST">
 
-        <input type="text" name="nama" required>
+            <label>Masukkan Nama:</label>
 
-        <button type="submit">Kirim</button>
+            <input type="text" name="nama" required>
 
-    </form>
+            <button type="submit">Kirim</button>
 
-    {% if hasil %}
-        <h3>Hasil: Hello, {{ hasil }}!</h3>
-    {% endif %}
+        </form>
+
+        {% if hasil %}
+            <h3>Hasil: Hello, {{ hasil }}!</h3>
+        {% endif %}
+
+    </div>
 
 </body>
 </html>
