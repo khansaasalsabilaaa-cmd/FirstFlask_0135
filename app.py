@@ -26,3 +26,12 @@ def post(post_id):
 @app.route("/form")
 def form():
     return render_template("index.html")
+
+#Route untuk menerima data POST
+@app.route("/proses", methods=["POST"])
+def proses():
+    nama = request.form.get("nama")
+    return f"Hello, {escape(nama)}! Data berhasil dikirim menggunakan POST."
+
+if __name__ == "__main__":
+    app.run(debug=True)
