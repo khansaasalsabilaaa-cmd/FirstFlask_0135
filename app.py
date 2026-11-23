@@ -32,7 +32,6 @@ def form():
 def proses():
     nama = request.form.get("nama")
     return render_template("index.html", hasil=nama)
-  if __name__ == "__main__":
+if __name__ == "__main__":
     app.run(debug=True)
 
-#Buat index HTML
