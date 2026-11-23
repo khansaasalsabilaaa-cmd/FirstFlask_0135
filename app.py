@@ -22,3 +22,7 @@ def profile(name):
 def post(post_id):
     return f"Post #21"
 
+#Route untuk menampilkan form
+@app.route("/form")
+def form():
+    return render_template("index.html")
