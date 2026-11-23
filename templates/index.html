@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Flask POST</title>
+</head>
+<body>
+
+    <h2>Form Input Nama</h2>
+
+    <form action="/proses" method="POST">
+
+        <label>Masukkan Nama:</label>
+
+        <input type="text" name="nama" required>
+
+        <button type="submit">Kirim</button>
+
+    </form>
+
+    {% if hasil %}
+        <h3>Hasil: Hello, {{ hasil }}!</h3>
+    {% endif %}
+
+</body>
+</html>
