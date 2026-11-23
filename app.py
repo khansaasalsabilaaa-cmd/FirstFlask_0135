@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 from markupsafe import escape
 app = Flask(__name__)
 @app.route("/")
@@ -31,7 +31,8 @@ def form():
 @app.route("/proses", methods=["POST"])
 def proses():
     nama = request.form.get("nama")
-    return f"Hello, {escape(nama)}! Data berhasil dikirim menggunakan POST."
-
-if __name__ == "__main__":
+    return render_template("index.html", hasil=nama)
+  if __name__ == "__main__":
     app.run(debug=True)
+
+#Buat index HTML
